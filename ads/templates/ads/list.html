@@ -1,0 +1,25 @@
+{% extends "ads/base.html" %}
+{% load static %}
+
+{% block content %}
+  {% for ad in ads %}
+    <div class="ad-container">
+      <div class="ad-image-wrapper">
+        {% if ad.images.first %}
+          <img class="ad-image" src="{{ ad.images.first.image.url }}" alt="Zdjęcie ogłoszenia">
+        {% else %}
+          <img class="ad-image" src="{% static 'ads/img/no-image.jpg' %}" alt="Brak zdjęcia">
+        {% endif %}
+      </div>
+      <div class="ad-details">
+        <h3><a href="{% url 'ads:detail' ad.id %}">{{ ad.title }}</a></h3>
+        <p>
+          <strong>Autor:</strong> {{ ad.author }}<br>
+          <strong>Data:</strong> {{ ad.created_at|date:"d.m.Y H:i" }}<br>
+          <strong>Email:</strong> {{ ad.email }}<br>
+          <strong>Opis:</strong> {{ ad.description|truncatewords:50 }}
+        </p>
+      </div>
+    </div>
+  {% endfor %}
+{% endblock %}

@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} Portal ogłoszeniowy {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'ads/css/list.css' %}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <div id="menu">
+        <h2> Portal ogłoszeniowy </h2>
+    </div>
+    <div id="content">
+      {% block content %}
+      {% endblock %}
+    </div>
+</body>
+</html>

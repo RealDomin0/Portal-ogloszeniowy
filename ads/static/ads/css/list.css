@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+#ad-container, .ad-container {
+    display: flex;
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+}
+
+.ad-container:hover {
+    background-color: #f0f0f0;
+}
+
+.ad-image-wrapper {
+    flex: 0 0 150px;
+    margin-right: 20px;
+}
+
+.ad-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.ad-details {
+    flex: 1;
+}
+
+.ad-details h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+    color: #333;
+}
+
+.ad-details a {
+    color: #2a7ae2;
+    text-decoration: none;
+}
+
+.ad-details a:hover {
+    text-decoration: underline;
+}
+
+.ad-details p {
+    margin: 5px 0;
+    line-height: 1.6;
+    color: #444;
+}
+
+strong {
+    color: #222;
+}
+

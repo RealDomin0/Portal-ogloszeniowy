@@ -1,0 +1,17 @@
+{% extends "ads/base.html" %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'ads/css/ad_detail.css' %}">
+{% endblock %}
+{% block title %}{{ ad.title }}{% endblock %}
+
+{% block content %}
+<h3 id="title">{{ ad.title}}</h3>
+<p>
+    <strong>Autor:</strong> {{ ad.author }} <br>
+    <strong>Data:</strong> {{ ad.created_at|date:"d.m.Y H:i" }} <br>
+    <strong>Email:</strong> {{ ad.email }} <br>
+    <strong>Opis:</strong> <br>
+    {{ ad.description }}
+</p>
+{% endblock %}
